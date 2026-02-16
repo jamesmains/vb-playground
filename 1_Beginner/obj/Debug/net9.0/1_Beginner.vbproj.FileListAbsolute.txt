@@ -1,0 +1,14 @@
+/home/jim/Documents/VB Net Projects/vb-playground/1_Beginner/bin/Debug/net9.0/1_Beginner
+/home/jim/Documents/VB Net Projects/vb-playground/1_Beginner/bin/Debug/net9.0/1_Beginner.deps.json
+/home/jim/Documents/VB Net Projects/vb-playground/1_Beginner/bin/Debug/net9.0/1_Beginner.runtimeconfig.json
+/home/jim/Documents/VB Net Projects/vb-playground/1_Beginner/bin/Debug/net9.0/1_Beginner.dll
+/home/jim/Documents/VB Net Projects/vb-playground/1_Beginner/bin/Debug/net9.0/1_Beginner.pdb
+/home/jim/Documents/VB Net Projects/vb-playground/1_Beginner/obj/Debug/net9.0/1_Beginner.GeneratedMSBuildEditorConfig.editorconfig
+/home/jim/Documents/VB Net Projects/vb-playground/1_Beginner/obj/Debug/net9.0/1_Beginner.AssemblyInfoInputs.cache
+/home/jim/Documents/VB Net Projects/vb-playground/1_Beginner/obj/Debug/net9.0/1_Beginner.AssemblyInfo.vb
+/home/jim/Documents/VB Net Projects/vb-playground/1_Beginner/obj/Debug/net9.0/1_Beginner.vbproj.CoreCompileInputs.cache
+/home/jim/Documents/VB Net Projects/vb-playground/1_Beginner/obj/Debug/net9.0/1_Beginner.dll
+/home/jim/Documents/VB Net Projects/vb-playground/1_Beginner/obj/Debug/net9.0/refint/1_Beginner.dll
+/home/jim/Documents/VB Net Projects/vb-playground/1_Beginner/obj/Debug/net9.0/1_Beginner.pdb
+/home/jim/Documents/VB Net Projects/vb-playground/1_Beginner/obj/Debug/net9.0/1_Beginner.genruntimeconfig.cache
+/home/jim/Documents/VB Net Projects/vb-playground/1_Beginner/obj/Debug/net9.0/ref/1_Beginner.dll
