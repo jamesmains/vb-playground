@@ -2,7 +2,7 @@ This is a simple project to explore VB (specifically in the context of .Net)
 
 ## Installation
 ### Linux
-* Install .NET SDK
+#### Install .NET SDK
 * `sudo apt update`
 * `sudo apt install dotnet-sdk-8.0`
 ### Extensions for VS Code
@@ -10,8 +10,9 @@ This is a simple project to explore VB (specifically in the context of .Net)
 ## Start New Project
 * `cd %your_target/path%`
 * `dotnet new console -lang "VB"`
-Run Project
-dotnet run
+## Run Project
+* `cd %your_target/path%`
+* `dotnet run`
 
 ## Projects
 
@@ -22,7 +23,7 @@ This project was just for getting something running. This is an 'expenses' progr
 This was a conceptual project to better understand how VB treats generics.
 
 ### 3 Database
-
+An expanded version of '1_Beginner' to save expenses tracked to a database. SQLite for the database and Dapper to automatically map parameterys in query executions.
 #### Dependencies
 SQLite: `dotnet add package Microsoft.Data.Sqlite`
 Dapper: `dotnet add package Dapper`

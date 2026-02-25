@@ -22,7 +22,7 @@ Public Module Database
         Using conn As New SqliteConnection(ConnectionString)
             Dim sql =   "INSERT INTO Expenses (Description, Amount, Category, DateCreated) " &
                         "VALUES (@Description, @Amount, @Category, @DateCreated)"
-            conn.Execute(sql, ex)
+            conn.Execute(sql, ex) ' Dapper maps the parameters automatically
         End Using
     End Sub
 
