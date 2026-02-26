@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Inventory.Desktop/Inventory.Desktop.csproj" />
+  <Project Path="Inventory.Logic/Inventory.Logic.vbproj" />
+</Solution>
