@@ -39,16 +39,16 @@ An expanded version of '1_Beginner' to save expenses tracked to a database. SQLi
 * Avalonia: `dotnet new install Avalonia.Templates`
     (https://github.com/AvaloniaUI/avalonia-dotnet-templates)
 #### New Project
-##### Create Solution
+#### Create Solution
 * `cd %your_target/path%`
 * `dotnet new sln`
-###### Create VB Logic Project
+#### Create VB Logic Project
 * `dotnet new classlib -lang "VB" -o Inventory.Logic`
 * `dotnet sln add Inventory.Logic`
-##### Create C# UI
+#### Create C# UI
 * `dotnet new avalonia.app -o Inventory.Desktop`
 * `dotnet sln add Inventory.Desktop`
-##### Link UI & Logic
+#### Link UI & Logic
 * `cd Inventory.Desktop`
 * `dotnet add reference ../Inventory.Logic/Inventory.Logic.vbproj`
 #### Build
