@@ -1,29 +1,61 @@
 <Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:logic="using:Inventory.Logic"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="Inventory.Desktop.MainWindow"
-        Title="Inventory.Desktop">
-    <StackPanel Margin="20">
-        <TextBox Name="ItemNameInput" Watermark="Item Name" />
-        <TextBox Name="QuantityInput" Watermark="Quantity" />
-        <Button Name="AddBtn" Content="Add Item" Click="AddBtn_Click" />
-        <ListBox Name="InventoryList">
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:logic="using:Inventory.Logic"
+    mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+    x:Class="Inventory.Desktop.MainWindow"
+    Title="Inventory.Desktop">
+    <Window.Styles>
+        <Style Selector="ListBox ListBox.ItemTemplate TextBlock TextBox Button Border">
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="2" />
+            <Setter Property="Padding" Value="10,5" />
+        </Style>
+        <Style Selector="Button.deleteBtn">
+            <Setter Property="Background" Value="Red" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Margin" Value="10,0,0,0" />
+            <Setter Property="Padding" Value="10,5" />
+        </Style>
+    </Window.Styles>
+    <Grid RowDefinitions="Auto, *">
+        <StackPanel Margin="20" Grid.Row="0">
+            <Grid ColumnDefinitions="*,Auto">
+            <StackPanel Grid.Column="0">
+                <TextBox Name="SearchItemInput" TextChanged="SearchText_Changed"
+                    Watermark="Search by Name" />
+                <TextBox Name="ItemNameInput" Watermark="Item Name" />
+                <TextBox Name="QuantityInput" Watermark="Quantity" />
+                <Button Name="AddBtn" Content="Add Item" Click="AddBtn_Click" />
+            </StackPanel>
+
+            <StackPanel Grid.Column="1">
+                <Button Name="JunkBtn" Content="Add Random Items" Click="JunkBtn_Click" />
+                <Button Name="DeleteAllBtn" Content="Delete ALL Items" Click="DeleteAllBtn_Click" />
+            </StackPanel>
+            </Grid>
+        </StackPanel>
+
+        <ListBox Name="InventoryList" Grid.Row="1">
             <ListBox.ItemTemplate>
                 <DataTemplate x:DataType="logic:Item">
-                    <Grid ColumnDefinitions="*, Auto">
-                        <StackPanel Grid.Column="0" VerticalAlignment="Center">
-                            <TextBlock Text="{Binding Name}"/>
-                            <TextBlock Text="{Binding StockStatus}" Foreground="{Binding StockStatusColor}"/>
+                    <Grid ColumnDefinitions="*, Auto, Auto">
+                        <StackPanel Grid.Column="0">
+                            <TextBlock Text="{Binding Name}" />
+                            <TextBlock Text="{Binding StockStatus}"
+                                Foreground="{Binding StockStatusColor}" />
                         </StackPanel>
-                        <Border Grid.Column="1" Background="#2e2323" CornerRadius="5" Padding="10,5">
-                            <TextBlock Text="{Binding Quantity}" VerticalAlignment="Center"/>
+                        <Border Grid.Column="1">
+                            <TextBlock Text="{Binding Quantity}" />
                         </Border>
+                        <Button Grid.Column="2"
+                            Content="X"
+                            Click="DeleteBtn_Click"
+                            CommandParameter="{Binding}" />
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-    </StackPanel>
+    </Grid>
 </Window>
