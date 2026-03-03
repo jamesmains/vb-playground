@@ -33,6 +33,7 @@ An expanded version of '1_Beginner' to save expenses tracked to a database. SQLi
 * Dapper: `dotnet add package Dapper`
 
 ### 4_Inventory(*)
+Further expansion what I learned with '1_Beginner' & '3_Database'. This time I've used a C# frontend for easier interactions with the database. Mainly this project was to get past using console apps.
 #### Dependencies
 * SQLite: `dotnet add package Microsoft.Data.Sqlite`
 * Dapper: `dotnet add package Dapper`
